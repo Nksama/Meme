@@ -56,6 +56,7 @@ func main() {
                file := meme.Image
                msg := tgbotapi.NewPhotoUpload(update.Message.Chat.ID, nil)
                msg.FileID = file
+               msg.Caption = meme.Title
                msg.UseExisting = true
                bot.Send(msg)
             }
