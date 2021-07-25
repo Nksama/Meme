@@ -60,8 +60,10 @@ func main() {
                   msg.UseExisting = true
                   bot.Send(msg)
                }
-           case start:
+           case "start":
             msg.Text = "Hello"
+            case "help":
+              msg.Text = "/meme"
 
          default:
             msg.Text = "I don't know that command"
