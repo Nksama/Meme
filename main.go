@@ -106,6 +106,10 @@ func main() {
 					bot.Send(msg)
 
 				}
+				
+			case "repo":
+				msg.Text = "https://github.com/Nksama/Meme"
+				
 
 			default:
 				msg.Text = "I don't know that command"
