@@ -88,6 +88,24 @@ func main() {
 					bot.Send(msg)
 
 				}
+				
+			case "hentai":
+				res, err := http.Get("https://api.waifu.pics/nsfw/neko")
+				if err != nil {
+					fmt.Println(err)
+				} else {
+					data, _ := ioutil.ReadAll(res.Body)
+					// fmt.Println(string(data))
+					var cat Neko
+					json.Unmarshal([]byte(data), &cat)
+					fmt.Println(cat.Url)
+					nekochan := cat.Url
+					msg := tgbotapi.NewPhotoUpload(update.Message.Chat.ID, nil)
+					msg.FileID = nekochan
+					msg.UseExisting = true
+					bot.Send(msg)
+
+				}
 
 			default:
 				msg.Text = "I don't know that command"
