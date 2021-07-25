@@ -7,4 +7,6 @@ commands:
 /help
 /meme
 /neko
+/hentai
+/repo
 ```
