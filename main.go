@@ -8,6 +8,7 @@ import (
 	"github.com/go-telegram-bot-api/telegram-bot-api"
 	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 type Meme struct {
@@ -22,7 +23,7 @@ type Neko struct {
 
 
 func main() {
-	token := ""
+	token := os.Getenv("TOKEN")
 	bot, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		log.Panic(err)
