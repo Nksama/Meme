@@ -1,4 +1,4 @@
-module nksama/github.com/nksama/Meme
+module github.com/nksama/Meme
 
 go 1.16
 
